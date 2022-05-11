@@ -1,0 +1,13 @@
+{
+
+    "SERVER_URL": "https://evc4lubonrjpmenwslwmsa332u0laijc.lambda-url.us-east-1.on.aws/",
+  
+    "THEME_COLORS": {
+  
+      "PRIMARY": "#007bff",
+  
+      "SECONDARY": "#fc3"
+  
+    }
+  
+  }

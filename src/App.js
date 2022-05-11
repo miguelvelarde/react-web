@@ -10,7 +10,7 @@ function App() {
 
   function doGet(){
     
-    const config = window['runConfig'];
+    const config = window['myvar'];
     
 
    const headers = {

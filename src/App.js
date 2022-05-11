@@ -2,21 +2,23 @@ import React, {useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
-import configuracion from "./configuracion.json"
+
 
 function App() {
 
   const [query, setQuery] = useState('test');
 
   function doGet(){
-    const api = configuracion.SERVER_URL;
+    
+    const config = window['runConfig'];
+    
 
-  const headers = {
+   const headers = {
     "Content-Type": "application/json",
   };
 
   axios
-    .get(api, { headers })
+    .get(config.apiUrl, { headers })
     .then((response) => {
       setQuery(response);
     })
@@ -24,7 +26,7 @@ function App() {
       setQuery(error);
     });
 
-    alert(JSON.stringify(query))
+    alert(query.data)
   }
 
 
@@ -42,6 +44,7 @@ function App() {
           Learn React
         </a>
         <button className='btn alert' onClick={doGet}>Test Get</button>
+        
       </header>
     </div>
   );
